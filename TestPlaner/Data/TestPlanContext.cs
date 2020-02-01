@@ -16,5 +16,6 @@ namespace TestPlaner.Data
 
         public DbSet<TestPlaner.models.TestCase> TestCase { get; set; }
         public DbSet<TestPlaner.models.TestSuite> TestSuite { get; set; }
+        public DbSet<TestPlaner.models.User> Users { get; set; }
     }
 }
