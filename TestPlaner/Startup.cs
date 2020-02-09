@@ -12,7 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using TestPlaner.Data;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using TestPlaner.helpers;
 
 namespace TestPlaner
 {
@@ -43,6 +45,22 @@ namespace TestPlaner
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler(builder =>
+                {
+                    builder.Run(async context=> {
+                        context.Response.StatusCode = 500;
+                        var error = context.Features.Get<IExceptionHandlerFeature>();
+                        if (error != null)
+                        {
+                            context.Response.AddApplicationError(error.Error.Message);
+                            await context.Response.WriteAsync(error.Error.Message);
+                        }
+                    });
+                
+                });
             }
             app.UseCors(options => options.WithOrigins("localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseHttpsRedirection();

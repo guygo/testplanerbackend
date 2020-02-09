@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using TestPlaner.helpers;
 
 namespace TestPlaner.Dtos
 {
@@ -11,7 +12,12 @@ namespace TestPlaner.Dtos
         [Required]
         public string UserName { get; set; }
         [Required]
-        [StringLength(8,MinimumLength = 6,ErrorMessage ="you must enter valid password")]
+       
+        [RegularExpression(@"^.*(?=.*\d).*$", ErrorMessage= "you must enter two numbers")]
+        [SpecialChars()]
+        [StringLength(30, MinimumLength = 6, ErrorMessage = "must contains 6 characters")]
+        [BigLetters()]
+        [SmallLetters()]
         public string Password { get; set; }
     }
 }

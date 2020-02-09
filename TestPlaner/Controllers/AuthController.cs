@@ -24,9 +24,11 @@ namespace TestPlaner.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]UserForRegsiterDto userForRegisterDto)
         {
+           
             //validation
             if (!ModelState.IsValid)
             { 
+
                 return BadRequest(ModelState);
             }
             userForRegisterDto.UserName = userForRegisterDto.UserName.ToLower();
