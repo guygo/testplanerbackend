@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPlaner", "TestPlaner\TestPlaner.csproj", "{95BB6DCD-D2F6-445E-B13C-36A332040CD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaCompiler", "JavaCompiler\JavaCompiler.csproj", "{CB436600-C8ED-4461-BA80-66A1379AAE67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "googlecloud", "googlecloud\googlecloud.csproj", "{BE8807FE-B5E1-4381-95D1-DB83F67E7C50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{95BB6DCD-D2F6-445E-B13C-36A332040CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95BB6DCD-D2F6-445E-B13C-36A332040CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95BB6DCD-D2F6-445E-B13C-36A332040CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB436600-C8ED-4461-BA80-66A1379AAE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB436600-C8ED-4461-BA80-66A1379AAE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB436600-C8ED-4461-BA80-66A1379AAE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB436600-C8ED-4461-BA80-66A1379AAE67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8807FE-B5E1-4381-95D1-DB83F67E7C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8807FE-B5E1-4381-95D1-DB83F67E7C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8807FE-B5E1-4381-95D1-DB83F67E7C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8807FE-B5E1-4381-95D1-DB83F67E7C50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
